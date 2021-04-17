@@ -13,15 +13,15 @@ const TestApi = ()=> {
     }, [])
 
     function fetchTodoTask(){
-        axios.get("http://localhost:1000/api/tasks?isFinished=false").then((res)=> setTodo(res.data))
+        axios.get("https://backend-kueakun.herokuapp.com/api/tasks?isFinished=false").then((res)=> setTodo(res.data))
     }
 
     function fetchDoneTask(){
-        axios.get("http://localhost:1000/api/tasks?isFinished=true").then((res)=> setDone(res.data))
+        axios.get("https://backend-kueakun.herokuapp.com/api/tasks?isFinished=true").then((res)=> setDone(res.data))
     }
 
     function onCreate(){
-        axios.post("http://localhost:1000/api/task", {
+        axios.post("https://backend-kueakun.herokuapp.com/api/task", {
             taskName: createInput,
             time: createTime,
         }).then(()=> {
@@ -31,7 +31,7 @@ const TestApi = ()=> {
     }
 
     function onUpdate(id, isFinished){
-        axios.put(`http://localhost:1000/api/task?id=${id}`,{ 
+        axios.put(`https://backend-kueakun.herokuapp.com/api/task?id=${id}`,{ 
             isFinished: isFinished,
         }).then(()=> {
             fetchTodoTask()
@@ -40,7 +40,7 @@ const TestApi = ()=> {
     }
 
     function onDelete(id){
-        axios.delete(`http://localhost:1000/api/task/${id}`).then(()=>{
+        axios.delete(`https://backend-kueakun.herokuapp.com/api/task/${id}`).then(()=>{
             fetchTodoTask()
             fetchDoneTask()
         })
