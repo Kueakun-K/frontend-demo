@@ -1,8 +1,5 @@
 import React from "react";
 import axios from "axios"
-import { BrowserRouter as Router, Switch, Route ,Link} from "react-router-dom";
-import Navbar from "./navbar";
-
 
 const TestApi = ()=> {
     const [todo, setTodo] = React.useState([])

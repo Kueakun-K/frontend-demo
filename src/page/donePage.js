@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "../navbar";
+import React, { useEffect } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Switch, Route ,Link} from "react-router-dom";
 
 const DonePage = () => {
     const [done, setDone] = React.useState([])

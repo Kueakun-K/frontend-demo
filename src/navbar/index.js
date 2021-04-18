@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 
 const Navbar = () => {
-    const [mode, setMode] = useState(0)
-  
-    useState(() => {
-      setMode(window.location.pathname)
-    }, [])
 
     return(
         <div class="navbar">         

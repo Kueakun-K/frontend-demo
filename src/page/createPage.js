@@ -1,8 +1,6 @@
 import React from "react";
-import Navbar from "../navbar";
 import {useHistory} from "react-router-dom"
 import axios from "axios"
-import { BrowserRouter as Router, Switch, Route ,Link} from "react-router-dom";
 
 const CreatePage = () => {
     const history = useHistory()
