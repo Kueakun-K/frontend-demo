@@ -6,6 +6,7 @@ import Navbar from "./navbar";
 import TestApi from "./TestApi"
 import DonePage from "./page/donePage";
 import CreatePage from "./page/createPage";
+import AboutPage from "./page/aboutPage";
 
 
 export default function App()  {
@@ -16,9 +17,8 @@ export default function App()  {
         <Switch>
           <Route exact path="/" component={TestApi} />
           <Route exact path="/done" component={DonePage} />
-          {/* <Route exact path="/contact" component={ContactPage} /> */}
+          <Route exact path="/about" component={AboutPage} />
           <Route exact path="/create" component={CreatePage} />
-          {/* <Route exact path="/edit/:id" component={EditPage} /> */}
         </Switch>
       </Router>
     </div>
