@@ -8,6 +8,7 @@ import DonePage from "./page/donePage";
 import CreatePage from "./page/createPage";
 import AboutPage from "./page/aboutPage";
 import RegisterPage from "./page/registerPage";
+import LoginPage from "./page/loginPage";
 
 
 export default function App()  {
@@ -21,6 +22,8 @@ export default function App()  {
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/create" component={CreatePage} />
           <Route exact path="/register" component={RegisterPage} />
+          <Route exact path="/login" component={LoginPage} />
+
         </Switch>
       </Router>
     </div>
