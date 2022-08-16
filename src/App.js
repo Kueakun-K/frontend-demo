@@ -3,26 +3,28 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
 import Navbar from "./navbar";
 
+
 import TestApi from "./TestApi"
 import DonePage from "./page/donePage";
 import CreatePage from "./page/createPage";
 import AboutPage from "./page/aboutPage";
 import RegisterPage from "./page/registerPage";
-import LoginPage from "./page/loginPage";
+
 
 
 export default function App()  {
+  
   return (
-    <div >
+    <div>
        <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={TestApi} />
+        <Route exact path="/"component={TestApi}></Route>
           <Route exact path="/done" component={DonePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/create" component={CreatePage} />
-          <Route exact path="/register" component={RegisterPage} />
-          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/signup" component={RegisterPage} />
+          
 
         </Switch>
       </Router>

@@ -1,20 +1,31 @@
 import React from "react";
-// import {useHistory} from "react-router-dom"
+import {useState} from "react"
+import {useHistory} from "react-router-dom"
 import axios from "axios"
 
-const LoginPage = () => {
-    // const history = useHistory()
-    const [createInput1, setCreateInput1] = React.useState("")
-    const [createInput2, setCreateInput2] = React.useState("")
 
-    function onCreate(){
-        axios.post("https://backend-kueakun.herokuapp.com/api/login", {
-            User: createInput1,
-            Password: createInput2,
-        }).then(()=> {
-            setCreateInput1("")
-            setCreateInput2("")
-            // history.push("/")
+const Login = ({ setLoginUser}) => {
+    const history = useHistory()
+    
+    const [ user, setUser] = useState({
+        username:"",
+        password:""
+    })
+
+    const handleChange = e => {
+        const { name, value } = e.target
+        setUser({
+            ...user,
+            [name]: value
+        })
+    }
+
+    function onlogin(){
+        axios.post("https://backend-kueakun.herokuapp.com/api/login", user)
+        .then(res=> {
+            alert(res.data.message)
+            setLoginUser(res.data.user)
+            history.push("/")
         })
     }
     return (
@@ -22,17 +33,13 @@ const LoginPage = () => {
             
         <div>
             <div class="content2">
-            <div><h1 style={{ fontSize: "56px",marginLeft: "50px" }}>Create</h1></div>
+            <div><h1 style={{ fontSize: "56px",marginLeft: "50px" }}>login</h1></div>
                 <ul>
                     <li class="card">
-                        <input type="text" placeholder="Username" value={createInput1} onChange={(e)=> {
-                            setCreateInput1(e.target.value)
-                        }}/><br/>
-                        <input type="text" placeholder="Password" value={createInput2} onChange={(e)=> {
-                            setCreateInput2(e.target.value)
-                        }}/><br/>
+                    <input type="text" name="username" placeholder="Username" value={user.username} onChange={handleChange}></input>
+                    <input type="password" name="password" placeholder="Password" value={user.password} onChange={handleChange}></input>
                         
-                        <button  class="button1" onClick={()=> onCreate()}>✔</button>
+                    <button  class="button1" onClick={()=> onlogin()}>✔</button>
                     </li>
                 </ul>
 
@@ -41,4 +48,4 @@ const LoginPage = () => {
        
            )
         }
-        export default LoginPage;
+        export default Login;

@@ -8,8 +8,8 @@ const RegisterPage = () => {
     const [createInput2, setCreateInput2] = React.useState("")
 
     function onCreate(){
-        axios.post("https://backend-kueakun.herokuapp.com/api/user", {
-            User: createInput1,
+        axios.post("https://backend-kueakun.herokuapp.com/api/signup", {
+            username: createInput1,
             Password: createInput2,
         }).then(()=> {
             setCreateInput1("")
@@ -18,8 +18,7 @@ const RegisterPage = () => {
         })
     }
     return (
-      
-            
+       
         <div>
             <div class="content2">
             <div><h1 style={{ fontSize: "56px",marginLeft: "50px" }}>Create</h1></div>

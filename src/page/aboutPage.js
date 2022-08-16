@@ -8,6 +8,7 @@ const AboutPage = () => {
             <ul>
                 <li style={{display: "flex"}}>
             <img src={cat} alt="Cat" ></img>
+            
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span style={{fontSize: "38px", marginBottom: "20px"}}>"แมวเหมียวว"</span>
             </li>

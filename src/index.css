@@ -13,46 +13,7 @@ code {
     monospace;
 }
 
-/* 
-.navbar {
-  width: 100%;
-  height: 65px;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  
-}
 
-.navbar .content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 40vw;
-  min-width: 70px;
-  
-} */
-
-
-/* .navbar .content .brand {
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-}
-.navbar .content .link-page {
-  display: flex;
-  flex-direction: row;
-}
-
-.navbar .content .link-page a {
-  margin: 0 1rem;
-  color: white;
-  font-size: 14px;
-  text-decoration: none;
-  transition: all ease-in-out 100ms;
-} */
 
 .content2{
   /* justify-content: space-between; */

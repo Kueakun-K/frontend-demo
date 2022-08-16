@@ -7,7 +7,6 @@ const TestApi = ()=> {
 
     React.useEffect(()=>{
         fetchTodoTask()
-       
     }, [])
 
     function fetchTodoTask(){
