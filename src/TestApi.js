@@ -42,7 +42,7 @@ const TestApi = ()=> {
                     <br/>
                     <span>{task.timeDate} </span>
                     <span>{task.time} </span>
-                    <button  class="button2" onClick={()=>onDelete(task._id)}>❌</button>
+                    <button  class="button2" onClick={()=>onDelete(task._id)}><span role="img">❌</span></button>
                     <button  class="button1" onClick={()=>onUpdate(task._id, true)}>✔</button>
                     
                 </li>)}
